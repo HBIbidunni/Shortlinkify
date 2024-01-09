@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <style>
+        body.light-mode {
+            background: linear-gradient(to bottom, #020202, #020202);
+            background-size: cover;
+            background-attachment: fixed;
+            background-image: url('https://picsum.photos/1920/1080');
+            background-blend-mode: overlay;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        body.dark-mode a {
+            color: #aaffcc; 
+        }
+
+        .container-wrapper {
+            position: relative;
+        }
+
+        .toggle-button {
+            position: fixed;
+            bottom: 10px;
+            left: 40px;
+            padding: 10px 15px;
+            background-color: #121612;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color:#d726ee;
+        }
+
+        .container {
+            padding-left: 20px; 
+            margin-bottom: 170px;
+        }
+
+         .table th, .table td {
+            text-align: center;
+            color:#1035da; 
+        }
+
+        .navbar {
+            background-color: #343a40;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            margin-right: 15px;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #ec07a7, #3a0ca3);
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+
+            letter-spacing: 2px;
+           }
+
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            }
+            to {
+                text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+            }
+        }
+</style>
+
+    <title>Document</title>
+</head>
+   <body class="light-mode">
+    <div class="container-wrapper">
+        <div class="navbar">
+            <a href="#">Single Paged App</a>
+        </div>
+
+        <div class="container">
+        <h1>ShortLinkiFy</h1>
+    <form action="/shortUrls" method="POST" class="my-4 
+    form-inline">
+        <label for="fullUrl" class="sr-only">Url</label>
+        <input required placeholder="Shorten a link"  type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
+        <button class="btn btn-success" type="submit">ShortLink It</button>
+    </form>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+           <tr>
+            <th>Full URL</th>
+            <th>Short URL</th>
+            <th>Clicks</th>
+            <th>Action</th>
+           </tr> 
+        </thead>
+        <tbody>
+            <% shortUrls.forEach(shortUrl => { %>
+                <tr>
+                    <td><div><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></div></td>
+                    <td><div><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></div></td>
+                    <td><div><%= shortUrl.clicks %></div></td>
+                    <td>
+                        <div><form action="/delete/<%= shortUrl._id %>" method="POST" onsubmit="return confirmDelete()">
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                        <div><%= shortUrl.action %></div>
+                        </div>
+                    </td>
+                </tr>
+           <% }) %>
+         </tbody>
+       </table>
+     </div>
+
+         <script>
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+            body.classList.toggle("light-mode", !body.classList.contains("dark-mode"));
+        }
+
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete this table entry?");
+        }
+</script>
+
+    <button onclick="toggleMode()" class="toggle-button">DM</button>
+  </body>
+</html>
