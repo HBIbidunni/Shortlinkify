@@ -1,4 +1,4 @@
-<div align="center"><h1>ShortLinikiFy</h1></div>:link:
+<div align="center"><h1>ShortLinikiFy</h1></div> :link:
 
 ------------------------
 
