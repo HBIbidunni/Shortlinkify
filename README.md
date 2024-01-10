@@ -1,3 +1,4 @@
+
 <div align="center"><h1>ShortLinikiFy</h1></div>
 
 ------------------------
@@ -123,46 +124,52 @@ This file contains metadata about the project and its dependencies.
 3) `index.ejs`
 
 This file is the main HTML template for the ShortLinkiFy web application. 
-It uses the __EJS templating engine__ for dynamic content rendering. Its key components:
+It uses the EJS templating engine for dynamic content rendering. Let's analyze its key components:
 
 - HTML Structure:
 
-<html>, <head>, and <body> tags define the basic HTML structure.
-<meta> tags set character encoding, viewport settings, and compatibility.
+html, head, and body tags define the basic HTML structure.
+meta tags set character encoding, viewport settings, and compatibility.
 External stylesheets are linked for Bootstrap and local styling.
 
 - Styles:
 
-The <style> block contains custom CSS for light and dark modes, a toggle button, container styles, table styles, and a navigation bar.
+The style block contains custom CSS for light and dark modes, 
+a toggle button, container styles, table styles, and a navigation bar.
 The @keyframes glow rule defines a simple animation for text shadow.
 
 - Title and Navigation:
 
-The <title> tag sets the document title.
-The navigation bar contains a link to the home page (#).
+The title tag sets the document title.
+The navigation bar contains a link to the single paged app (#).
 
 - Container and Form:
 
-A container holds the main content. The <h1> tag displays the application name with a gradient background.
+A container holds the main content.
+The h1 tag displays the application name with a gradient background.
 A form allows users to submit a URL for shortening.
 
 - Table:
 
-A table displays information about each shortened URL, including the full URL, short URL, clicks, and delete button.
+A table displays information about each shortened URL, 
+including the full URL, short URL, clicks, and delete button.
 
 - Scripts:
 
 JavaScript functions for toggling dark mode and confirming delete actions.
 A button triggers the dark mode toggle function.
 
-
 4) `shortUrl.js`
 
 This file defines the Mongoose schema for the ShortUrl model, which represents a shortened URL in the MongoDB database.
 
-- Schema: The schema includes fields for the full URL, short URL (generated using shortId), click count, and an action field.
+- Schema:
 
--Exports: The module exports the Mongoose model based on the schema.
+The schema includes fields for the full URL, short URL (generated using shortId), click count, and an action field.
+
+- Exports:
+
+The module exports the Mongoose model based on the schema.
 
 
 ## ShortLinkiFy Demo: Light & Dark Mode
