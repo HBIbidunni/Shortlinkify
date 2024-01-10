@@ -69,3 +69,16 @@ npm run devStart
 This command runs the server using nodemon for automatic reloading during development.
 
 - Step 2: Open your browser and __go to http://localhost:3000/__ to access ShortLinkiFy.
+
+## ShortLinkiFy Demo: Light & Dark Mode
+
+<div>
+  <img src="https://i.imgur.com/4F5alEe.jpg" alt="ShortLinkiFy 1" width="400" />
+  <img src="https://i.imgur.com/ZUS4z6W.jpg" alt="ShortLinkiFy 2" width="400" />
+</div>
+
+<div>
+  <img src="https://i.imgur.com/jsqNO0N.jpg" alt="ShortLinkify 3" width="400" />
+  <img src="https://i.imgur.com/W4sUFzh.jpg" alt="ShortLinkiFy 4" width="400" />
+</div>
+
