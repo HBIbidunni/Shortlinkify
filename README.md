@@ -1,5 +1,8 @@
-# ShortLinikiFy 
+<div align="center">
+  <h1>ShortLinikiFy</h1>
+</div>
 -----------------
+
 <div align="center">
   <img src="https://i.imgur.com/0iXMDac.jpg" alt="My Shortlinkify Design">
 </div>
