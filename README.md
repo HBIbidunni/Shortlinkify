@@ -143,8 +143,7 @@ The navigation bar contains a link to the home page (#).
 
 - Container and Form:
 
-A container holds the main content.
-The <h1> tag displays the application name with a gradient background.
+A container holds the main content. The <h1> tag displays the application name with a gradient background.
 A form allows users to submit a URL for shortening.
 
 - Table:
