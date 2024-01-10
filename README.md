@@ -26,19 +26,19 @@ Before running the application, the following must be installed:
 - `MongoDB`
 
 ## Installation
-- Step 1: `Clone this repository`:
+- Step 1: __Clone this repository__:
 
 ```
 git clone https://github.com/HBIbidunni/Shortlinkify.git
 
 ```
-- Step 2: `Navigate to the project directory`: 
+- Step 2: __Navigate to the project directory__: 
 
 ```
 cd Shortlinkify
 
 ```
-- Step 3: `Install dependencies`: 
+- Step 3: __Install dependencies__: 
 
 ```
 npm i express mongoose ejs
@@ -48,7 +48,7 @@ npm i express mongoose ejs
 ## Configuration
 - Step 1: __Create a MongoDB database__.
 
-- Update the `mongoose.connect` method in __server.js__ with the __MongoDB__ connection string:
+- Update the __mongoose.connect__ method in __server.js__ with the __MongoDB__ connection string:
 
 ```
 mongoose.connect('your-mongodb-connection-string', {
@@ -69,6 +69,46 @@ npm run devStart
 This command runs the server using nodemon for automatic reloading during development.
 
 - Step 2: Open your browser and __go to http://localhost:3000/__ to access ShortLinkiFy.
+
+
+## Application Structure
+
+- __index.ejs__: The main HTML template file containing the structure and styling of the web application.
+
+- __shortUrl.js__: Defines the Mongoose schema for the ShortUrl model used to interact with the MongoDB database.
+
+- __package.json__: Specifies project details, dependencies, and scripts for running the application.
+
+- __server.js__: The main server file that sets up the Express application, defines routes, and connects to the database.
+
+
+
+## Detailed Explanation of the Application Structure
+
+This breakdown provides a comprehensive understanding of the ShortLinkiFy project, 
+covering its frontend structure, backend data schema, project configuration, and server setup. 
+Each component contributes to the functionality and appearance of the Single Paged URL shortener application.
+
+1) `server.js`
+
+ This is the main server file responsible for setting up the Express application, defining routes, and connecting to the MongoDB database.
+
+- Imports required libraries, including Express, Mongoose, and the ShortUrl model.
+
+- Express Setup: Configures the Express app with EJS as the view engine.
+
+- Enables parsing of URL-encoded data.
+
+- Defines routes for handling homepage requests, URL shortening submissions, URL deletion requests, and short URL redirection.
+
+- Connects to the MongoDB database using Mongoose.
+
+- Specifies the port to listen on and starts the server.
+
+
+
+
+
 
 ## ShortLinkiFy Demo: Light & Dark Mode
 
