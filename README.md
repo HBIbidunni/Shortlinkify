@@ -1,15 +1,11 @@
-<div align="center">
-  <h1>ShortLinikiFy</h1>
-</div>
-
+<div align="center"><h1>ShortLinikiFy</h1></div>
 ------------------------
 
 <div align="center">
   <img src="https://i.imgur.com/0iXMDac.jpg" alt="My Shortlinkify Design">
 </div>
 
-__Overview__
--------------------
+## __Overview__
 
 This Single Paged __URL Shortener project__ is designed to provide a simple and efficient way to __shorten long URLs__ into __concise, easy-to-share links__. 
 The application is built using [__Node.js__, __MongoDB__, __Express.js__ and __EJS__ for the view engine],
