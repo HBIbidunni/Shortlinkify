@@ -9,6 +9,7 @@
 </div>
 
 __Overview__
+-------------------
 
 This Single Paged __URL Shortener project__ is designed to provide a simple and efficient way to __shorten long URLs__ into __concise, easy-to-share links__. 
 The application is built using [__Node.js__, __MongoDB__, __Express.js__ and __EJS__ for the view engine],
